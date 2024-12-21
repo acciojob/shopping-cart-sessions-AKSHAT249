@@ -56,7 +56,7 @@ products.forEach((product) => {
 	  
 	  
 	  renderCart();
-	  sessionStorage.setItem("cart-items", JSON.stringify(cartItems))
+	  // sessionStorage.setItem("cart-items", JSON.stringify(cartItems))
 	  
   }
   
@@ -67,7 +67,7 @@ products.forEach((product) => {
 	  cartItems = filteredItems;
 	  // console.log(cartItems)
 	  renderCart();
-	  sessionStorage.setItem("cart-items", JSON.stringify(cartItems))
+	  // sessionStorage.setItem("cart-items", JSON.stringify(cartItems))
 	  
   }
   
@@ -75,7 +75,7 @@ products.forEach((product) => {
   function clearCart() {
 	  cartItems = []
 	  renderCart();
-	  sessionStorage.removeItem("cart-items")
+	  // sessionStorage.removeItem("cart-items")
   }
   
   // Initial render
