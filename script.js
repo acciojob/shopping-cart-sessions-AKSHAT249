@@ -55,10 +55,10 @@ products.forEach((product) => {
   
   // Remove item from cart
   function removeFromCart(productId) {
-	  console.log("removed item", productId)
+	  // console.log("removed item", productId)
 	  let filteredItems = cartItems.filter( (item,index) => item.id != productId)
 	  cartItems = filteredItems;
-	  console.log(cartItems)
+	  // console.log(cartItems)
 	  renderCart();
 	  sessionStorage.setItem("cart-items", JSON.stringify(cartItems))
 	  
