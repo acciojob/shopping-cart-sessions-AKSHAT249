@@ -42,13 +42,19 @@ products.forEach((product) => {
 		  	<li>${item.name} ${item.price}  <button onclick="removeFromCart(${item.id})">Remove</button> </li>
 		  `
 	  } )
+	  sessionStorage.setItem("cart-items", JSON.stringify(cartItems));
   }
   
   // Add item to cart
   function addToCart(productId) {
 	  // let item = products[productId-1];
 	  let item = products.find(product => product.id === productId);
-	  cartItems.push(item);
+	  const exists = cartItems.some((cartItem) => cartItem.id === productId);
+	  if (!exists) {
+	    cartItems.push(item);
+	  }
+	  
+	  
 	  renderCart();
 	  sessionStorage.setItem("cart-items", JSON.stringify(cartItems))
 	  
