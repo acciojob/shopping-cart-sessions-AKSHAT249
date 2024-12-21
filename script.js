@@ -16,7 +16,7 @@ let cartItems = [];
 const productList = document.getElementById("product-list");
 const cartList = document.getElementById("cart-list");
 
-if(sessionStorage.getItem("cart-items")){
+if(JSON.parse(sessionStorage.getItem("cart-items"))){
 	cartItems = JSON.parse(sessionStorage.getItem("cart-items"));
 	renderCart();
 }
