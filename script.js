@@ -68,7 +68,7 @@ products.forEach((product) => {
   function clearCart() {
 	  cartItems = []
 	  renderCart();
-	  sessionStorage.setItem("cart-items", JSON.stringify(cartItems))
+	  sessionStorage.removeItem("cart-items")
   }
   
   // Initial render
